@@ -1,0 +1,31 @@
+@use "pages/variables";
+@use "pages/mixins";
+
+@use "pages/header";
+@use "pages/footer";
+
+//  (各セクション)
+@use "pages/top"; // トップページのアニメーションもここに含める
+@use "pages/problem";
+@use "pages/about";
+@use "pages/reason";
+@use "pages/teachers";
+@use "pages/archive";
+@use "pages/course-flow";
+@use "pages/price";
+@use "pages/counseling-flow";
+@use "pages/faq";
+@use "pages/about-meta";
+@use "pages/about-offlinemeetup";
+
+
+// pages (各ページ固有のスタイル、必要に応じて)
+// @use "pages/top";
+// @use "pages/pronavi-continuity-1";
+// @use "pages/pronavi-continuity-2";
+
+// // components (再利用可能なパーツ)
+// @use "components/button";
+// @use "components/card";
+// @use "components/form";
+// @use "components/modal";
