@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+// ハンバーガー
+
+.hamburger {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    cursor: pointer;
+
+    span {
+        display: block;
+        width: 50%;
+        height: 2px;
+        background: #333;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.3s;
+    }
+
+    &.open {
+        span {
+            background-color: #333;
+        }
+
+        span:nth-child(1) {
+            top: 50%;
+            transform: rotate(-45deg);
+        }
+
+        span:nth-child(2) {
+            opacity: 0;
+        }
+
+        span:nth-child(3) {
+            top: 50%;
+            transform: rotate(45deg);
+        }
+
+
+    }
+}
+
+.hamburger span:nth-child(1) {
+    top: 36%;
+}
+
+.hamburger span:nth-child(2) {
+    top: 50%;
+}
+
+.hamburger span:nth-child(3) {
+    top: 64%;
+}
+
+// navメニュー
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    // width: 80%;
+    // max-width: 400px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 80px 20px;
+    background-color: #FDFAE7;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+
+    .nav-menu {
+        text-align: center;
+
+
+        li a {
+            display: inline-block;
+            line-height: 60px;
+            border-bottom: 1px solid;
+            width: 38%;
+            padding: 20px 50px;
+            font-size: 1.75rem;
+        }
+    }
+
+    // カウンセリングボタン
+    .counseling-btn {
+        text-align: center;
+        margin-top: 50px;
+
+        a {
+            display: inline-block;
+            background-color: #EB6846;
+            color: white;
+            margin-top: 30px;
+            width: 50%;
+            padding: 20px 40px;
+            border-radius: 15px;
+            font-size: 1.75rem;
+            font-weight: 400;
+            box-shadow: 0 4px 12px rgba(175, 174, 174, 0.9);
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.06) translateY(-2px);
+                opacity: 0.95;
+            }
+        }
+    }
+
+    nav.open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
+
+}
