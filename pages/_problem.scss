@@ -1,0 +1,60 @@
+.problem-title {
+    text-align: center;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 4px;
+        background-color: #FFF100;
+        top: 100%;
+        left: 30%;
+    }
+}
+
+.problem-title span {
+    font-size: 2rem;
+}
+
+.problem-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 60px;
+    display: flex;
+}
+
+.problem-icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 250px;
+    background: #E1E1E1;
+    border-radius: 50%;
+    box-shadow: inset 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+
+.problem-icon {
+    width: 35%;
+    height: auto;
+    display: block;
+}
+.problem-item:first-child .problem-icon,
+.problem-item:last-child .problem-icon {
+    width: 60%;
+}
+
+.problem-text {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.problem-sub-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
