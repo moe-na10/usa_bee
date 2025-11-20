@@ -1,165 +1,79 @@
-a {
-  text-decoration: none;
-  color: #333;
+.faq_content .accordion_type1 {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-li {
-  list-style: none;
-}
-
-.hamburger {
-  width: 60px;
-  height: 60px;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 100;
+.accordion_header_type1 {
+  background-color: #ececec;
+  color: #0f132a;
+  line-height: 2.4;
+  letter-spacing: 2;
+  padding: 24px 40px 24px 52px;
+  transition-duration: 0.2s;
+  z-index: 1;
+  position: relative;
   cursor: pointer;
 }
-.hamburger span {
-  display: block;
-  width: 50%;
-  height: 2px;
-  background: #333;
+.accordion_header_type1::before {
+  content: "Q.";
+  font-weight: bold;
+  font-size: 1.6rem;
+  top: 6px;
+  left: 30px;
   position: absolute;
-  left: 50%;
+  color: #142143;
   transform: translateX(-50%);
-  transition: 0.3s;
 }
-.hamburger.open span {
-  background-color: #333;
-}
-.hamburger.open span:nth-child(1) {
+.accordion_header_type1 .i_box_type1 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
   top: 50%;
-  transform: rotate(-45deg);
+  right: 5%;
+  margin-top: -20px;
 }
-.hamburger.open span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.open span:nth-child(3) {
+.accordion_header_type1 .type1_i:before {
+  content: "";
+  width: 18px;
+  height: 1px;
   top: 50%;
-  transform: rotate(45deg);
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #0f132a;
+  position: absolute;
 }
-
-.hamburger span:nth-child(1) {
-  top: 36%;
-}
-
-.hamburger span:nth-child(2) {
+.accordion_header_type1 .type1_i:after {
+  content: "";
+  width: 1px;
+  height: 18px;
   top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  background-color: #0f132a;
+  position: absolute;
+}
+.accordion_header_type1.open .type1_i:after {
+  display: none;
+  padding: 30px 30px;
 }
 
-.hamburger span:nth-child(3) {
-  top: 64%;
+.accordion_inner_type1 .box_type1 {
+  height: 300px;
+  border-left: 2px solid #ececec;
+  border-right: 2px solid #ececec;
+  border-bottom: 2px solid #ececec;
 }
-
-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 100vh;
-  margin: 0 auto;
-  padding: 80px 20px;
-  background-color: #FDFAE7;
-  overflow-y: auto;
-  opacity: 0;
-  pointer-events: none;
-}
-nav .nav-menu {
-  text-align: center;
-}
-nav .nav-menu li a {
-  display: inline-block;
-  line-height: 60px;
-  border-bottom: 1px solid;
-  width: 38%;
-  padding: 20px 50px;
-  font-size: 1.75rem;
-}
-nav .counseling-btn {
-  text-align: center;
-  margin-top: 50px;
-}
-nav .counseling-btn a {
-  display: inline-block;
-  background-color: #EB6846;
-  color: white;
-  margin-top: 30px;
-  width: 50%;
-  padding: 20px 40px;
-  border-radius: 15px;
-  font-size: 1.75rem;
-  font-weight: 400;
-  box-shadow: 0 4px 12px rgba(175, 174, 174, 0.9);
-  transition: 0.3s;
-}
-nav .counseling-btn a:hover {
-  transform: scale(1.06) translateY(-2px);
-  opacity: 0.95;
-}
-nav nav.open {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.problem-title {
-  text-align: center;
+.accordion_inner_type1 .box_type1 .txt_b_ac {
+  padding: 24px 40px 24px 52px;
   position: relative;
 }
-.problem-title::before {
-  content: "";
+.accordion_inner_type1 .box_type1 .txt_b_ac::before {
+  content: "A.";
+  font-weight: bold;
+  font-size: 1.6rem;
+  top: 14px;
+  left: 30px;
   position: absolute;
-  width: 40%;
-  height: 4px;
-  background-color: #FFF100;
-  top: 100%;
-  left: 30%;
-}
-
-.problem-title span {
-  font-size: 2rem;
-}
-
-.problem-card {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 60px;
-  display: flex;
-}
-
-.problem-icon-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
-  height: 250px;
-  background: #E1E1E1;
-  border-radius: 50%;
-  box-shadow: inset 0 20px 60px rgba(0, 0, 0, 0.18);
-}
-
-.problem-icon {
-  width: 35%;
-  height: auto;
-  display: block;
-}
-
-.problem-item:first-child .problem-icon,
-.problem-item:last-child .problem-icon {
-  width: 60%;
-}
-
-.problem-text {
-  margin-top: 60px;
-  text-align: center;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.problem-sub-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 600;
+  color: #142143;
+  transform: translateX(-50%);
 }/*# sourceMappingURL=style.css.map */
