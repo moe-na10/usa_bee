@@ -1,22 +1,24 @@
-@use "pages/variables";
-@use "pages/mixins";
+@charset "UTF-8";
 
-@use "pages/header";
-@use "pages/footer";
+@use "../pages/variables";
+@use "../pages/mixin";
+
+@use "../pages/header";
+@use "../pages/footer";
 
 //  (各セクション)
-@use "pages/top"; // トップページのアニメーションもここに含める
-@use "pages/problem";
-@use "pages/about";
-@use "pages/reason";
-@use "pages/teachers";
-@use "pages/archive";
-@use "pages/course-flow";
-@use "pages/price";
-@use "pages/counseling-flow";
-@use "pages/faq";
-@use "pages/about-meta";
-@use "pages/about-offlinemeetup";
+@use "../pages/top"; // トップページのアニメーションもここに含める
+@use "../pages/problem";
+@use "../pages/about";
+@use "../pages/reason";
+@use "../pages/teachers";
+@use "../pages/archive";
+@use "../pages/course-flow";
+@use "../pages/price";
+@use "../pages/counseling-flow";
+@use "../pages/faq";
+@use "../pages/about-meta";
+@use "../pages/about-offlinemeetup";
 
 
 // pages (各ページ固有のスタイル、必要に応じて)
