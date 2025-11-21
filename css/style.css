@@ -9,12 +9,12 @@ li {
 }
 
 .hamburger {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 100;
+  z-index: 10000;
   cursor: pointer;
 }
 .hamburger span {
@@ -66,6 +66,11 @@ nav {
   overflow-y: auto;
   opacity: 0;
   pointer-events: none;
+  z-index: 9999;
+}
+nav.open {
+  opacity: 1;
+  pointer-events: auto;
 }
 nav .nav-menu {
   text-align: center;
@@ -98,10 +103,6 @@ nav .counseling-btn a {
 nav .counseling-btn a:hover {
   transform: scale(1.06) translateY(-2px);
   opacity: 0.95;
-}
-nav nav.open {
-  opacity: 1;
-  pointer-events: auto;
 }
 
 .footer {
@@ -230,9 +231,6 @@ nav nav.open {
   width: 50%;
 }
 
-section {
-  text-align: center;
-}
 
 .counseling-title {
   text-align: center;
