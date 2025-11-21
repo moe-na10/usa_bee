@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 
 a {
     text-decoration: none;
@@ -12,13 +12,15 @@ li {
 // ハンバーガー
 
 .hamburger {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 100;
+    z-index: 10000;
     cursor: pointer;
+
+    
 
     span {
         display: block;
@@ -81,6 +83,12 @@ nav {
     overflow-y: auto;
     opacity: 0;
     pointer-events: none;
+    z-index: 9999;
+
+    &.open {
+        opacity: 1;
+        pointer-events: auto;
+    }
 
     .nav-menu {
         text-align: center;
@@ -121,10 +129,7 @@ nav {
         }
     }
 
-    nav.open {
-        opacity: 1;
-        pointer-events: auto;
-    }
+    
 
 
 
