@@ -1,0 +1,169 @@
+.about-meta {
+    background-color: #fffbec;
+    width: 100%;
+    text-align: left;
+}
+
+.section-title {
+    width: 40%;
+    background-color: #2070AD;
+    color: #fff;
+    margin-top: 50px;
+    border-radius: 0 50px 50px 0;
+    text-align: center;
+    padding: 25px 0;
+    margin-bottom: 50px;
+}
+
+.bg-contents {
+    background-image: url(../img/meta-img.png);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+
+    .top-text {
+        width: 50%;
+        background-color: #fff;
+        border: 2px solid #222;
+        padding: 35px 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+// avaters
+.avatars {
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.chat-content {
+    width: 80%;
+    display: flex;
+    margin-bottom: 40px;
+    gap: 30px;
+    text-align: center;
+    align-items: center;
+
+
+    .avatar img {
+        width: 50px;
+    }
+}
+
+.speech-bubble-left {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+    padding: 16px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    background-color: #d6fdff;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 70%;
+        left: 0;
+        border-style: solid;
+        border-width: 10px 20px 10px 0;
+        border-color: transparent #000000 transparent transparent;
+        translate: -100% -50%;
+        transform: skew(0, 15deg);
+        transform-origin: right;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 70%;
+        left: 0;
+        border-style: solid;
+        border-width: 7.8px 15.5px 7.8px 0;
+        border-color: transparent #d6fdff transparent transparent;
+        translate: -100% -50%;
+        transform: skew(0, 15deg);
+        transform-origin: right;
+    }
+}
+
+.speech-bubble-right {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+    padding: 16px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 70%;
+        right: 0;
+        border-style: solid;
+        border-width: 0 0 20px 20px;
+        border-color: transparent transparent transparent #000000;
+        translate: 100% -50%;
+        transform: skew(0, 15deg);
+        transform-origin: left;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 70%;
+        right: 0;
+        border-style: solid;
+        border-width: 0 0 15.2px 15.2px;
+        border-color: transparent transparent transparent #fff;
+        translate: 100% calc(-50% - 0.4px);
+        transform: skew(0, 15deg);
+        transform-origin: left;
+    }
+}
+
+
+// point card
+.meta-point {
+    margin-top: 100px;
+    h3,h4 {
+        text-align: center;
+        padding: 30px 20px;
+    }
+h4 {
+    color: pink;
+}
+    p {
+        text-align: center;
+    }
+}
+
+.meta-point-cards {
+    width: 80%;
+    margin: 0 auto;
+    gap: 40px;
+    display: flex;
+    margin-bottom: 70px;
+
+}
+
+.point-card {
+    background-color: #fff;
+    border: 1px solid #222;
+}
+
