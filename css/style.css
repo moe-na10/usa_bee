@@ -223,6 +223,13 @@ nav nav.open {
   font-weight: 600;
 }
 
+.teachers .teachers-item {
+  display: flex;
+}
+.teachers .teachers-item .teacher-text {
+  width: 50%;
+}
+
 section {
   text-align: center;
 }
