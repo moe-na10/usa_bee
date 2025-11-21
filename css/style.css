@@ -224,6 +224,14 @@ nav .counseling-btn a:hover {
   font-weight: 600;
 }
 
+.teachers .teachers-item {
+  display: flex;
+}
+.teachers .teachers-item .teacher-text {
+  width: 50%;
+}
+
+
 .counseling-title {
   text-align: center;
   margin-bottom: 60px;
