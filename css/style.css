@@ -231,6 +231,115 @@ nav .counseling-btn a:hover {
   width: 50%;
 }
 
+.course-area {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.course-title2 {
+  position: relative;
+}
+.course-title2::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 50%;
+  height: 4px;
+  background-color: #FFF100;
+  top: 100%;
+}
+
+.step {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  margin-top: 80px;
+}
+
+.course-text {
+  width: calc(100% - 120px);
+}
+
+.number {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 80px;
+}
+.number li {
+  width: 100px;
+  height: 100px;
+  background-color: #FFF100;
+  border-radius: 50%;
+  margin-bottom: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.25rem;
+  position: relative;
+  z-index: 2;
+}
+.number::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 45px;
+  width: 10px;
+  height: 90%;
+  background-color: #FFF100;
+  z-index: 1;
+}
+
+.course-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.course-body {
+  width: 60%;
+}
+
+.course-heading {
+  font-weight: 700;
+  margin: 10px 0 5px 0;
+}
+
+.course-desc {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.course-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.counseling-btn {
+  text-align: center;
+  margin-top: 50px;
+}
+.counseling-btn a {
+  display: inline-block;
+  background-color: #EB6846;
+  color: white;
+  margin-top: 30px;
+  width: 50%;
+  padding: 20px 40px;
+  border-radius: 15px;
+  font-size: 1.75rem;
+  font-weight: 400;
+  box-shadow: 0 4px 12px rgba(175, 174, 174, 0.9);
+  transition: 0.3s;
+}
+.counseling-btn a:hover {
+  transform: scale(1.06) translateY(-2px);
+  opacity: 0.95;
+}
 
 .counseling-title {
   text-align: center;
@@ -317,16 +426,17 @@ nav .counseling-btn a:hover {
 }
 
 .line-btn {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.line-btn a {
+  color: #333;
   display: inline-block;
   margin: 0 auto;
-  text-decoration: none;
   color: #333;
   background-color: #B2E9C3;
   padding: 20px 40px;
   border-radius: 15px;
-}
-.line-btn a {
-  color: #333;
 }
 
 .faq_content .accordion_type1 {
