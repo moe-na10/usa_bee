@@ -53,6 +53,21 @@
         display: inline-block;
     }
 }
+.meta-link {
+    position: relative;
+    font-weight: bold;
+
+    &::before {
+        content: "" ;
+        position: absolute;
+        width: 50px;
+        height: 2px;
+        background-color: #EB6846;
+        top: 100%;
+    }
+}
+
+
 
 
 
