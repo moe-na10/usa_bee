@@ -281,6 +281,7 @@ nav .counseling-btn a:hover {
   width: 100px;
   height: 100px;
   background-color: #FFF100;
+  border: 4px solid #FFA500;
   border-radius: 50%;
   margin-bottom: 45px;
   display: flex;
@@ -403,6 +404,15 @@ nav .counseling-btn a:hover {
 }
 .steps-text a {
   display: inline-block;
+}
+.steps-text a .btn-line {
+  color: #333;
+  display: inline-block;
+  margin: 0 auto;
+  color: #333;
+  background-color: #B2E9C3;
+  padding: 20px 40px;
+  border-radius: 15px;
 }
 
 .meta-link {
