@@ -54,3 +54,86 @@ $(function () {
     $(window).on('load', checkVisibility);
     $(window).on('scroll', checkVisibility);
 });
+
+
+
+
+
+
+// offline-meetup slider
+
+$(function () {
+    $(".js-slick01").slick({
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 6000,
+        cssEase: 'linear',
+        slidesToShow: 3,
+        swipe: false,
+        pauseOnFocus: false, 
+        pauseOnHover: false,
+        arrows: false,
+
+ responsive: [
+      {
+        breakpoint: 1024, // 画面幅1024px以下
+        settings: {
+          slidesToShow: 2, // 3枚表示
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,  // 画面幅768px以下
+        settings: {
+          slidesToShow: 2, // 2枚表示
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,  // 画面幅480px以下
+        settings: {
+          slidesToShow: 1, // 1枚表示
+          slidesToScroll: 1
+        }
+      }
+    ]
+    });
+
+
+    $(".js-slick02").slick({
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 6000,
+        cssEase: 'linear',
+        slidesToShow: 3,
+        swipe: false,
+        pauseOnFocus: false, 
+        pauseOnHover: false,
+        arrows: false,
+        rtl: true,
+
+            responsive: [
+      {
+        breakpoint: 1024, // 画面幅1024px以下
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,  // 画面幅768px以下
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,  // 画面幅480px以下
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+    });
+});
