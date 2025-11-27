@@ -1,0 +1,137 @@
+#counseling-flow {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    // border: 1px solid;
+}
+
+
+.counseling-title {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 4px;
+        background-color: #FFF100;
+        top: 100%;
+        left: 30%;
+    }
+}
+.steps-text {
+    margin-bottom: 20px;
+}
+
+.cou-text {
+    text-align: center;
+    padding-top: 60px;
+
+    .cou-text1,
+    .cou-text2 {
+        margin-bottom: 50px;
+    }
+}
+
+.cou-steps {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    gap: 50px;
+}
+
+.cou-item {
+    position: relative;
+
+    img {
+        width: 30%;
+    }
+}
+
+.cou-item--center {
+    transform: translateX(-55px); // ← ここで左へ動く
+}
+
+.cou-item--last {
+    margin-right: 40px;
+}
+
+.cou-item--last img {
+    width: 100px;
+}
+
+.divider {
+    position: relative;
+    width: 40px;
+    height: 140px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 40vh;
+        background: #F7D232;
+        top: -35;
+        right: 300%;
+        transform: translateX(-50%);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        border-left: 18px solid #F7D232;
+        border-bottom: 30px solid transparent;
+        border-top: 30px solid transparent;
+        top: 85%;
+        right: 190%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.meta-link {
+    position: relative;
+    font-weight: bold;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 2px;
+        background-color: #EB6846;
+        top: 100%;
+    }
+}
+
+.cou-text3 {
+    margin-bottom: 50px;
+}
+
+.line-btn {
+    display: inline-block;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #333;
+    background-color: #B2E9C3;
+    padding: 20px 40px;
+    border-radius: 15px;
+    width: 213px;
+    box-shadow: 0 4px 12px rgba(175, 174, 174, 0.9);
+    transition: 0.3s;
+
+    &:hover {
+        transform: scale(1.06) translateY(-2px);
+        opacity: 0.95;
+    }
+}
+
+.line-btn--center {
+    display: flex;
+    justify-content: center;
+
+    a {
+        margin: 0 auto;
+    }
+}
