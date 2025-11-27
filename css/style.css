@@ -352,67 +352,91 @@ nav .counseling-btn a:hover {
   opacity: 0.95;
 }
 
+#counseling-flow {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .counseling-title {
   text-align: center;
   margin-bottom: 60px;
+  position: relative;
+}
+.counseling-title::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 4px;
+  background-color: #FFF100;
+  top: 100%;
+  left: 30%;
+}
+
+.steps-text {
+  margin-bottom: 20px;
 }
 
 .cou-text {
   text-align: center;
+  padding-top: 60px;
 }
 .cou-text .cou-text1,
 .cou-text .cou-text2 {
-  margin-bottom: 60px;
-}
-
-.inner {
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .cou-steps {
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  margin-bottom: 80px;
+  justify-content: flex-start;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  gap: 50px;
 }
 
 .cou-item {
-  flex: 1 1 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
 }
-
-.cou-item p {
-  margin: 0;
-}
-
 .cou-item img {
   width: 30%;
-  margin-bottom: 40px;
+}
+
+.cou-item--center {
+  transform: translateX(-55px);
+}
+
+.cou-item--last {
+  margin-right: 40px;
 }
 
 .cou-item--last img {
-  width: 35%;
+  width: 100px;
 }
 
-.steps-text {
-  align-items: center;
+.divider {
+  position: relative;
+  width: 40px;
+  height: 140px;
 }
-.steps-text a {
-  display: inline-block;
+.divider::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 40vh;
+  background: #F7D232;
+  top: -35;
+  right: 300%;
+  transform: translateX(-50%);
 }
-.steps-text a .btn-line {
-  color: #333;
-  display: inline-block;
-  margin: 0 auto;
-  color: #333;
-  background-color: #B2E9C3;
-  padding: 20px 40px;
-  border-radius: 15px;
+.divider::after {
+  content: "";
+  position: absolute;
+  border-left: 18px solid #F7D232;
+  border-bottom: 30px solid transparent;
+  border-top: 30px solid transparent;
+  top: 85%;
+  right: 190%;
+  transform: translate(-50%, -50%);
 }
 
 .meta-link {
@@ -428,48 +452,33 @@ nav .counseling-btn a:hover {
   top: 100%;
 }
 
-.divider {
-  position: relative;
-  width: 40px;
-  height: 140px;
-}
-.divider::before {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 35vh;
-  background: #F7D232;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.divider::after {
-  content: "";
-  position: absolute;
-  border-left: 18px solid #F7D232;
-  border-bottom: 30px solid transparent;
-  border-top: 30px solid transparent;
-  top: 75%;
-  left: 75%;
-  transform: translate(-50%, -50%);
-}
-
 .cou-text3 {
   margin-bottom: 50px;
 }
 
 .line-btn {
-  text-align: center;
-  margin-bottom: 50px;
-}
-.line-btn a {
-  color: #333;
   display: inline-block;
   margin: 0 auto;
+  text-decoration: none;
   color: #333;
   background-color: #B2E9C3;
   padding: 20px 40px;
   border-radius: 15px;
+  width: 213px;
+  box-shadow: 0 4px 12px rgba(175, 174, 174, 0.9);
+  transition: 0.3s;
+}
+.line-btn:hover {
+  transform: scale(1.06) translateY(-2px);
+  opacity: 0.95;
+}
+
+.line-btn--center {
+  display: flex;
+  justify-content: center;
+}
+.line-btn--center a {
+  margin: 0 auto;
 }
 
 .faq_content .accordion_type1 {
