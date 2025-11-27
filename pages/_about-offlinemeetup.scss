@@ -3,6 +3,21 @@
 offline-meetup
 
 --------------------------------------------------------------*/
+body {
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 16px;
+
+    .wrapper {
+        width: 100%;
+        padding: 0 10px;
+        background-color: orange;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
 .about-offline-meetup {
     background-color: #fffbec;
 }
