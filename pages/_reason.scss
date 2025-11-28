@@ -2,7 +2,21 @@
 
 // }
 
+.reason-title {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
 
+    &::before {
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 4px;
+        background-color: #FFF100;
+        top: 100%;
+        left: 30%;
+    }
+}
 .honeycomb {
   display: flex;
   justify-content: center;
