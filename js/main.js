@@ -137,6 +137,54 @@ $(function () {
     ]
     });
 
+$(function () {
+
+  // アコーディオン本体（中身のみ slide）
+  $(".accordion_header_type1").on("click", function () {
+
+    if ($(this).hasClass("accordion-hidden")) return; // 非表示モードは無効
+
+    $(this).next(".accordion_inner_type1").slideToggle(300);
+    $(this).toggleClass("open");
+  });
+
+
+  /* ---------- 最初の4つだけ残して5つ目以降を非表示 ---------- */
+  const headers = $(".accordion_header_type1");
+  const inners  = $(".accordion_inner_type1");
+
+  headers.each(function (i) {
+    if (i >= 4) {
+      $(this).addClass("accordion-hidden").hide();   // header は hide() のみ
+      inners.eq(i).addClass("accordion-hidden").hide(); // inner も hide()
+    }
+  });
+
+
+  /* ---------- もっと見る ---------- */
+  $(".faq-more-btn").on("click", function () {
+
+    $(this).toggleClass("open");
+
+    if ($(this).hasClass("open")) {
+
+      // 開く → 5つ目以降の「ヘッダーは show()」「中身はそのまま閉じた状態」
+      headers.slice(4).removeClass("accordion-hidden").show();
+      inners.slice(4).removeClass("accordion-hidden");
+
+    } else {
+
+      // 閉じる → 5つ目以降の「中身 slideUp」「ヘッダー hide()」
+      inners.slice(4).slideUp(300, function(){
+        headers.slice(4).addClass("accordion-hidden").hide();
+        inners.slice(4).addClass("accordion-hidden");
+      });
+
+    }
+  });
+
+});
+
 
 
     /*麦とホップfadeIn*/ 
