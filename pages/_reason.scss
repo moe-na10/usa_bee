@@ -1,0 +1,112 @@
+// .reason {
+
+// }
+
+
+.honeycomb {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  /* 左右の縦グループ */
+  .honeycomb-left,
+  .honeycomb-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 250px;
+    align-items: center;
+    position: relative;
+  }
+}
+
+/* 六角形 */
+.hex {
+  width: 250px;
+  height: 280px;
+  background: gray;
+  clip-path: polygon(50% 0%,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0% 75%,
+      0% 25%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: -50px;
+  text-align: center;
+  position: relative;
+  isolation: isolate;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+
+/* 枠線 */
+&::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #FFF;
+  clip-path: inherit;
+  transform: scale(0.94);
+  z-index: -1;
+}
+
+/* ホバー */
+&:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* 中の画像・タイトル */
+ img {
+  max-width: 50px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* 真ん中のホバー */
+.center-adjust {
+  transform: translateY(8px);
+}
+.center-adjust:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+}
+
+.middle-left:hover,
+.middle-right:hover {
+  transform: translateY(5px) scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.honeycomb-left .hex:last-child:hover,
+.honeycomb-right .hex:last-child:hover {
+  transform: translateY(8px) scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.hex-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.4;
+  background: transparent;
+  margin: 0;
+  padding: 0 4px;
+}
+
+.middle-left {
+  left: -130px;
+}
+.middle-right {
+  left: 130px;
+}
