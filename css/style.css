@@ -9,7 +9,7 @@ li {
 }
 
 .header-logo img {
-  width: 10%;
+  max-width: 100px;
 }
 
 .hamburger {
