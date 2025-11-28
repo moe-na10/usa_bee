@@ -2,21 +2,21 @@
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
-    
+
 }
 
 .course-title2 {
     position: relative;
-    
+
 
     &::before {
         content: "";
         position: absolute;
-        display:inline-block;
+        display: inline-block;
         width: 50%;
         height: 4px;
         background-color: #FFF100;
-        
+
         top: 100%;
         left: 25%;
 
@@ -94,26 +94,66 @@
     width: 40px;
     height: 40px;
 }
+
 .counseling-btn {
-        text-align: center;
-        margin-top: 50px;
+    text-align: center;
+    margin-top: 50px;
 
-        a {
-            display: inline-block;
-            background-color: #EB6846;
-            color: white;
-            margin-top: 30px;
-            width: 50%;
-            padding: 20px 40px;
-            border-radius: 15px;
-            font-size: 1.75rem;
-            font-weight: 400;
-            box-shadow: 0 4px 12px rgba(175, 174, 174, 0.9);
-            transition: 0.3s;
+    a {
+        display: inline-block;
+        background-color: #EB6846;
+        color: white;
+        margin-top: 30px;
+        width: 50%;
+        padding: 20px 40px;
+        border-radius: 15px;
+        font-size: 1.75rem;
+        font-weight: 400;
+        box-shadow: 0 4px 12px rgba(175, 174, 174, 0.9);
+        transition: 0.3s;
 
-            &:hover {
-                transform: scale(1.06) translateY(-2px);
-                opacity: 0.95;
-            }
+        &:hover {
+            transform: scale(1.06) translateY(-2px);
+            opacity: 0.95;
         }
     }
+}
+
+
+// 受講の流れ
+@media (max-width: 375px) {
+
+    .course-row {
+        justify-content: space-around;
+    }
+
+    .course-title2::before {
+        width: 80%;
+        left: 10%;
+    }
+
+    .course-desc {
+        font-size: 0.6rem;
+    }
+
+    .course-heading {
+        font-size: 0.7rem;
+    }
+
+    .number {
+        padding-left: 30px;
+
+        &::before {
+            left: 93%;
+        }
+    }
+
+    .number li {
+        margin-bottom: 62px;
+    }
+
+    .counseling-btn a {
+        padding: 10px 20px;
+        font-size: 0.6rem;
+    }
+}

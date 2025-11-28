@@ -47,7 +47,7 @@
     position: relative;
 
     img {
-        width: 30%;
+        width: 25%;
     }
 }
 
@@ -133,5 +133,56 @@
 
     a {
         margin: 0 auto;
+    }
+}
+
+
+
+// カウンセリングレスポンシブ
+@media (max-width: 375px) {
+    .counseling-title::before {
+        width: 90%;
+        left: 5%;
+    }
+
+    .cou-steps {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    .cou-item--center {
+        transform: none;
+    }
+    .cou-item--last {
+        margin-right: 0;
+    }
+
+    .cou-text {
+        font-size: 0.75rem;
+    }
+
+    .divider {
+        position: relative;
+        width: 340px;
+        height: 2px;
+        background-color: #e8c321;
+        margin: 40px auto;
+    }
+
+    .divider::after {
+        content: "";
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-top: 30px solid #e8c321;
+    }
+
+    .divider::before {
+        display: none !important;
     }
 }
