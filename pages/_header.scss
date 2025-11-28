@@ -1,5 +1,3 @@
-
-
 a {
     text-decoration: none;
     color: #333;
@@ -13,6 +11,7 @@ li {
 .header-logo img {
     max-width: 200px;
 }
+
 // ハンバーガー
 
 .hamburger {
@@ -24,7 +23,7 @@ li {
     z-index: 10000;
     cursor: pointer;
 
-    
+
 
     span {
         display: block;
@@ -100,11 +99,10 @@ nav {
 
         li a {
             display: inline-block;
-            line-height: 60px;
             border-bottom: 1px solid;
             width: 38%;
             padding: 20px 50px;
-            font-size: 1.75rem;
+            font-size: 1rem;
         }
     }
 
@@ -132,9 +130,19 @@ nav {
             }
         }
     }
+}
 
-    
+// headerレスポンシブ
+@media(max-width: 357px) {
 
+    nav li a {
+        font-size: 0.75rem;
+    }
 
-
+    nav .counseling-btn a {
+        font-size: 0.75rem;
+    }
+    nav .nav-menu li a {
+        padding: 10px;
+    }
 }
