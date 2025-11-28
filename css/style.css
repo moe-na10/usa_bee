@@ -206,14 +206,14 @@ nav .counseling-btn a:hover {
   z-index: 1000;
   text-align: center;
 }
-.teaser-text h1 {
+.teaser-text h2 {
   letter-spacing: 3;
   font-weight: 400;
   opacity: 0;
   position: relative;
   animation: titleUp 2s ease 0.5s forwards;
 }
-.teaser-text h1::after {
+.teaser-text h2::after {
   content: "";
   background-color: #FFF100;
   width: 100%;
