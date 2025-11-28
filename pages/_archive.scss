@@ -1,0 +1,154 @@
+.archive {
+    padding: 80px 0;
+    background: #f5f5f5;
+  
+    h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 40px;
+    }
+  
+    /* =========================
+       カード一覧レイアウト
+       ========================= */
+    .archive-item {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(220px, 1fr)); // PCで4列
+      gap: 32px;
+      padding: 0 40px;
+    }
+  
+    /* =========================
+       1人分のカード
+       ========================= */
+    .archive-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      padding: 16px 16px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* =========================
+       テキスト（Before / After）
+       ========================= */
+    .archive-text {
+      margin-bottom: 12px;
+  
+      .before-text,
+      .after-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+  
+      .before-text {
+        position: relative;
+        margin-bottom: 8px;
+  
+        /* Before → After の間の矢印 */
+        &::after {
+          content: "↓";
+          display: block;
+          margin-top: 4px;
+          font-size: 1rem;
+        }
+      }
+  
+      .after-text {
+        font-weight: 700;
+      }
+    }
+  
+    /* =========================
+       実績画像
+       ========================= */
+    .archive-main-img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 16px;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+  
+    /* =========================
+       プロフィール（横並び）
+       ========================= */
+    .archive-name {
+      display: grid;
+      grid-template-columns: auto 1fr;  // 左：画像 / 右：テキスト
+      column-gap: 12px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 12px;
+  
+      > img {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        object-fit: cover;
+        grid-row: 1 / 3;  // 名前＋属性の2行ぶんを縦にまたぐ
+      }
+  
+      .archive-name-main {
+        grid-column: 2;
+        font-weight: 700;
+        margin-bottom: 4px;
+        text-align: left;
+      }
+  
+      ul {
+        grid-column: 2;
+        display: flex;
+        flex-wrap: wrap;          // ✅ 属性が多いときは行ごとに折り返し
+        justify-content: center;  // ✅ 折り返しても中央寄せ
+        gap: 6px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 0.85rem;
+        color: #555;
+        text-align: center;
+  
+        li {
+          white-space: nowrap;
+          letter-spacing: -0.3px;
+        }
+  
+        li + li {
+          position: relative;
+          padding-left: 10px;
+  
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 14px;
+            background: #ccc;
+          }
+        }
+      }
+    }
+  
+    /* =========================
+       レスポンシブ
+       ========================= */
+    @media screen and (max-width: 1024px) {
+      .archive-item {
+        grid-template-columns: repeat(2, minmax(240px, 1fr)); // 2列×4行
+        padding: 0 24px;
+        gap: 24px;
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      .archive-item {
+        grid-template-columns: 1fr;
+      }
+    }
+}
