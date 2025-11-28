@@ -1,43 +1,120 @@
+// .teachers {
+//     padding: 80px 0;
+//     text-align: center;
+    
+//         h2 {
+//             font-size: 2.4rem;
+//             margin-bottom: 60px;
+//         }
+//     }
+    
+//     .teachers-item {
+//     display: flex;
+//     align-items: center;        // 縦方向中央
+//     justify-content: center;    // 横方向中央
+//     gap: 40px;
+//     margin: 0 auto 80px;
+//     max-width: 900px;
+//     flex-direction: column;
+    
+//         img {
+//             display: block;
+//             width: 260px;
+//             height: auto;
+//         }
+    
+//         .teacher-text {
+//             max-width: 420px;
+//             text-align: left;
+//         }
+//     }
+    
+//     // PCレイアウ
+//     @media screen and (min-width: 769px) {
+    
+//         .teachers-item {
+//              flex-direction: row;      // PCは横並び
+//     }
+    
+//     // PCで1・3人目だけ左右反転
+//     .teachers-item:nth-of-type(odd) {
+//             flex-direction: row-reverse;
+//         }
+//     }
+
+
 .teachers {
     padding: 80px 0;
     text-align: center;
-    
-        h2 {
-            font-size: 2.4rem;
-            margin-bottom: 60px;
-        }
+  
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: 60px;
+      text-align: center;
     }
-    
+  
     .teachers-item {
-    display: flex;
-    align-items: center;        // 縦方向中央
-    justify-content: center;    // 横方向中央
-    gap: 40px;
-    margin: 0 auto 80px;
-    max-width: 900px;
-    flex-direction: column;
-    
-        img {
-            display: block;
-            width: 260px;
-            height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin: 0 auto 80px;
+      max-width: 900px;
+      flex-direction: column;
+  
+      img {
+        display: block;
+        width: 260px;
+        height: auto;
+      }
+  
+      .teacher-text {
+        max-width: 420px;
+        text-align: left;
+        line-height: 1.9;
+        color: #444;
+  
+        h3 {
+          font-size: 2rem;
+          font-weight: 700;
+          letter-spacing: 0.18em;
+          margin-bottom: 14px;
+          padding-left: 14px;
+          position: relative;
+          text-transform: uppercase;
+  
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 24px;
+            border-radius: 999px;
+            background: #00a6c4;
+          }
         }
-    
-        .teacher-text {
-            max-width: 420px;
-            text-align: left;
+  
+        p {
+          margin-bottom: 0.8em;
+  
+          &:first-of-type {
+            font-weight: 600;
+          }
         }
+      }
     }
-    
-    // PCレイアウ
+  
+    // 📌 ← メディアクエリは teachers の内部に置く！
     @media screen and (min-width: 769px) {
-    
-        .teachers-item {
-             flex-direction: row;      // PCは横並び
+  
+      .teachers-item {
+        flex-direction: row;
+      }
+  
+      .teachers-item:nth-of-type(odd) {
+        flex-direction: row-reverse;
+      }
     }
-    
-    // PCで1・3人目だけ左右反転
-    .teachers-item:nth-of-type(odd) {
-            flex-direction: row-reverse;
-        }
-    }
+  }

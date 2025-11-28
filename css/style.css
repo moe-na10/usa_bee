@@ -640,9 +640,9 @@ nav .counseling-btn a:hover {
 .teachers h2 {
   font-size: 2.4rem;
   margin-bottom: 60px;
+  text-align: center;
 }
-
-.teachers-item {
+.teachers .teachers-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -651,24 +651,52 @@ nav .counseling-btn a:hover {
   max-width: 900px;
   flex-direction: column;
 }
-.teachers-item img {
+.teachers .teachers-item img {
   display: block;
   width: 260px;
   height: auto;
 }
-.teachers-item .teacher-text {
+.teachers .teachers-item .teacher-text {
   max-width: 420px;
   text-align: left;
+  line-height: 1.9;
+  color: #444;
 }
-
+.teachers .teachers-item .teacher-text h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin-bottom: 14px;
+  padding-left: 14px;
+  position: relative;
+  text-transform: uppercase;
+}
+.teachers .teachers-item .teacher-text h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 24px;
+  border-radius: 999px;
+  background: #00a6c4;
+}
+.teachers .teachers-item .teacher-text p {
+  margin-bottom: 0.8em;
+}
+.teachers .teachers-item .teacher-text p:first-of-type {
+  font-weight: 600;
+}
 @media screen and (min-width: 769px) {
-  .teachers-item {
+  .teachers .teachers-item {
     flex-direction: row;
   }
-  .teachers-item:nth-of-type(odd) {
+  .teachers .teachers-item:nth-of-type(odd) {
     flex-direction: row-reverse;
   }
 }
+
 .voice {
   padding: 80px 0;
   background: #f5f5f5;
