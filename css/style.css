@@ -705,10 +705,20 @@ nav .counseling-btn a:hover {
   padding: 80px 0;
   text-align: center;
 }
-.teachers h2 {
+.teachers .teachers-title {
+  position: relative;
   font-size: 2.4rem;
   margin-bottom: 60px;
   text-align: center;
+}
+.teachers .teachers-title::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 4px;
+  background-color: #FFF100;
+  top: 100%;
+  left: 30%;
 }
 .teachers .teachers-item {
   display: flex;
@@ -770,10 +780,20 @@ nav .counseling-btn a:hover {
   background: #f5f5f5;
   /*  プロフィールと本文の「間」に線を入れる */
 }
-.voice h2 {
+.voice .voice-title {
   text-align: center;
   font-size: 2.4rem;
   margin-bottom: 40px;
+  position: relative;
+}
+.voice .voice-title::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 4px;
+  background-color: #FFF100;
+  top: 100%;
+  left: 30%;
 }
 .voice .student-contents {
   display: flex;
@@ -867,10 +887,20 @@ nav .counseling-btn a:hover {
      レスポンシブ
      ========================= */
 }
-.archive h2 {
+.archive .archive-title {
   text-align: center;
   font-size: 2.4rem;
   margin-bottom: 40px;
+  position: relative;
+}
+.archive .archive-title::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 4px;
+  background-color: #FFF100;
+  top: 100%;
+  left: 30%;
 }
 .archive .archive-item {
   display: grid;
@@ -889,26 +919,41 @@ nav .counseling-btn a:hover {
   align-items: center;
 }
 .archive .archive-text {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  text-align: center;
 }
 .archive .archive-text .before-text,
 .archive .archive-text .after-text {
   font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 .archive .archive-text .before-text {
   position: relative;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  color: #666;
+  letter-spacing: 0.03em;
   /* Before → After の間の矢印 */
 }
 .archive .archive-text .before-text::after {
   content: "↓";
   display: block;
-  margin-top: 4px;
+  margin-top: 6px;
   font-size: 1rem;
 }
 .archive .archive-text .after-text {
   font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+  display: inline-block;
+  padding: 6px 14px 4px;
+  border-radius: 999px;
+  background: #fff7ed;
+}
+.archive .archive-text .after-text strong {
+  color: #ff6b3d;
+  font-size: 1.2rem;
+  font-weight: 800;
 }
 .archive .archive-main-img {
   width: 100%;
