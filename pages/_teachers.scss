@@ -1,13 +1,43 @@
-
 .teachers {
+    padding: 80px 0;
+    text-align: center;
+    
+        h2 {
+            font-size: 2.4rem;
+            margin-bottom: 60px;
+        }
+    }
     
     .teachers-item {
-        display: flex;
-        // text-align: center;
-        
-        .teacher-text {
-            width: 50%;
+    display: flex;
+    align-items: center;        // 縦方向中央
+    justify-content: center;    // 横方向中央
+    gap: 40px;
+    margin: 0 auto 80px;
+    max-width: 900px;
+    flex-direction: column;
+    
+        img {
+            display: block;
+            width: 260px;
+            height: auto;
         }
-
+    
+        .teacher-text {
+            max-width: 420px;
+            text-align: left;
+        }
     }
-}
+    
+    // PCレイアウ
+    @media screen and (min-width: 769px) {
+    
+        .teachers-item {
+             flex-direction: row;      // PCは横並び
+    }
+    
+    // PCで1・3人目だけ左右反転
+    .teachers-item:nth-of-type(odd) {
+            flex-direction: row-reverse;
+        }
+    }
