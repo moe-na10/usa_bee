@@ -188,8 +188,8 @@ $(function () {
 
 
     /*麦とホップfadeIn*/ 
-    var $targetSection = $('.about-items');
-    var $pointCards = $targetSection.find('.about-item');
+    var $targetSection = $('.stats');
+    var $pointCards = $targetSection.find('.stat-item');
     function checkVisibility() {
         if ($targetSection.length === 0) {
             return;

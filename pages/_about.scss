@@ -234,3 +234,16 @@
 .stat-value span {
   font-size: 0.4em;
 }
+
+.stats .stat-item {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.stats .stat-item.is-animated {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.stats .stat-item:nth-child(1).is-animated { animation-delay: 0s; }
+.stats .stat-item:nth-child(2).is-animated { animation-delay: 0.3s; }
+.stats .stat-item:nth-child(3).is-animated { animation-delay: 0.6s; }
