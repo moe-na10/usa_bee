@@ -610,6 +610,10 @@ nav .counseling-btn a:hover {
   animation-delay: 0.6s;
 }
 
+#reason {
+  padding-block: 60px;
+}
+
 .reason-title {
   text-align: center;
   margin-bottom: 60px;
@@ -2239,7 +2243,7 @@ slider
 /* ==================================================
 _header/scss
 ===================================================== */
-@media (max-width: 357px) {
+@media (max-width: 1024px) {
   nav li a {
     font-size: 0.75rem;
   }
@@ -2268,7 +2272,7 @@ _top.scss
 /* ==================================================
 _problem.scss
 ===================================================== */
-@media (max-width: 375px) {
+@media (max-width: 1024px) {
   .problem-title::before {
     width: 80%;
     left: 10%;
@@ -2298,7 +2302,6 @@ _about.scss
     height: 55vh;
   }
   .about-upper-textarea p {
-    line-height: 2;
     letter-spacing: 0;
     font-size: 12px;
   }
@@ -2309,6 +2312,54 @@ _about.scss
 /* ==================================================
 _reason/scss
 ===================================================== */
+@media (max-width: 768px) {
+  .honeycomb {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .middle-left,
+  .middle-right {
+    left: 0;
+    transform: none !important;
+  }
+  .hex {
+    margin-bottom: 20px;
+  }
+  .hex .honeycomb-left .hex:last-child,
+  .hex .honeycomb-right .hex:last-child {
+    margin-bottom: 0;
+  }
+  .hex .hex:hover {
+    transform: none !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+}
+@media (max-width: 768px) and (max-width: 500px) {
+  .honeycomb {
+    gap: 40px;
+  }
+  .honeycomb-left,
+  .honeycomb-right {
+    width: 100%;
+    align-items: center;
+  }
+  .hex {
+    width: 280px;
+    height: 320px;
+    margin-bottom: 25px;
+  }
+  .hex-title {
+    font-size: 16px;
+    padding: 0 8px;
+  }
+  .introduce-btn {
+    width: 90%;
+    padding: 15px 20px;
+    margin-top: 40px;
+    font-size: 1.1rem;
+  }
+}
 /* ==================================================
 _teachers/scss
 ===================================================== */
@@ -2347,32 +2398,132 @@ _archive.scss
 /* ==================================================
 _course-flow.scss
 ===================================================== */
-@media (max-width: 375px) {
-  .course-row {
-    justify-content: space-around;
+/* ここからレスポンシブ */
+@media (max-width: 768px) {
+  /* h2 下の黄色ラインのリサイズ */
+  .counseling-title::before {
+    width: 90%;
+    left: 5%;
   }
+  /* 3step を縦並びに変更 */
+  .cou-steps {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+    gap: 40px;
+  }
+  /* ずらしていた位置補正を解除 */
+  .cou-item--center {
+    transform: none;
+  }
+  .cou-item--last {
+    margin-right: 0;
+  }
+  /* divider を縦線 → 横線に変更 */
+  .divider {
+    width: 240px;
+    height: 2px;
+    background-color: #E8C321;
+    margin: 24px auto;
+    position: relative;
+  }
+  /* ▶︎ 下向きの矢印に変換 */
+  .divider::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 25px solid #E8C321;
+  }
+  /* 縦線の before を消す */
+  .divider::before {
+    display: none;
+  }
+  /* テキスト少し小さく */
+  .cou-text {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 480px) {
+  /* ────────────────
+     STEP 全体を横並びにする
+     ──────────────── */
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  /* ────────────────
+     左の番号（1〜5）
+     ──────────────── */
+  .number {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+  }
+  .number::before {
+    display: none;
+  }
+  .number li {
+    margin-bottom: 48px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  .number li:last-child {
+    margin-bottom: 0;
+  }
+  /* ────────────────
+     course-text（右側）
+     ──────────────── */
+  .course-text {
+    width: 100%;
+  }
+  /* 各ステップの行 */
+  .course-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+  .course-row:last-child {
+    margin-bottom: 0;
+  }
+  /* テキスト部分（タイトル + 説明） */
+  .course-body {
+    width: 70%;
+    text-align: left;
+  }
+  .course-heading {
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+  }
+  .course-desc {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+  /* アイコン */
+  .course-icon img {
+    width: 40px;
+    height: auto;
+  }
+  /* ────────────────
+     タイトルの装飾
+     ──────────────── */
   .course-title2::before {
     width: 80%;
     left: 10%;
   }
-  .course-desc {
-    font-size: 0.6rem;
-  }
-  .course-heading {
-    font-size: 0.7rem;
-  }
-  .number {
-    padding-left: 30px;
-  }
-  .number::before {
-    left: 93%;
-  }
-  .number li {
-    margin-bottom: 62px;
-  }
+  /* ボタン */
   .counseling-btn a {
     padding: 10px 20px;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
 }
 /* ==================================================
@@ -2437,31 +2588,35 @@ _price.scss
 /* ==================================================
 _counselling-flow.scss
 ===================================================== */
-@media (max-width: 375px) {
+@media (max-width: 768px) {
+  /* h2 下の黄色ラインのリサイズ */
   .counseling-title::before {
     width: 90%;
     left: 5%;
   }
+  /* 3step を縦並びに変更 */
   .cou-steps {
     flex-direction: column;
+    align-items: center;
     margin-right: 0;
+    gap: 40px;
   }
+  /* ずらしていた位置補正を解除 */
   .cou-item--center {
     transform: none;
   }
   .cou-item--last {
     margin-right: 0;
   }
-  .cou-text {
-    font-size: 0.75rem;
-  }
+  /* divider を縦線 → 横線に変更 */
   .divider {
-    position: relative;
-    width: 340px;
+    width: 240px;
     height: 2px;
-    background-color: #e8c321;
-    margin: 40px auto;
+    background-color: #E8C321;
+    margin: 24px auto;
+    position: relative;
   }
+  /* ▶︎ 下向きの矢印に変換 */
   .divider::after {
     content: "";
     position: absolute;
@@ -2470,12 +2625,17 @@ _counselling-flow.scss
     transform: translateX(-50%);
     width: 0;
     height: 0;
-    border-left: 60px solid transparent;
-    border-right: 60px solid transparent;
-    border-top: 30px solid #e8c321;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 25px solid #E8C321;
   }
+  /* 縦線の before を消す */
   .divider::before {
-    display: none !important;
+    display: none;
+  }
+  /* テキスト少し小さく */
+  .cou-text {
+    font-size: 0.85rem;
   }
 }
 /* ==================================================
