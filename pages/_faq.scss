@@ -1,3 +1,24 @@
+.faq {
+  padding-block: 60px;
+  text-align: center;
+
+  .faq-title {
+    position: relative;
+      font-size: 2.4rem;
+      margin-bottom: 60px;
+      text-align: center;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 26%;
+          height: 6px;
+          background-color: #FFF100;
+          top: 100%;
+          left: 37%;
+      }
+  }
+}
 
 .faq_content .accordion_type1 {
     max-width: 1100px;
@@ -104,7 +125,7 @@
 .faq-more-btn {
   display: block;
   margin: 30px auto 0;
-  padding: 12px 30px;
+  padding: 18px 30px;
   background-color: #0f132a;
   color: #fff;
   border: none;

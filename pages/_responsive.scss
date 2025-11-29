@@ -1,0 +1,714 @@
+/* ==================================================
+_header/scss
+===================================================== */
+// headerレスポンシブ
+@media(max-width: 1024px) {
+
+    nav li a {
+        font-size: 0.75rem;
+    }
+
+    nav .counseling-btn a {
+        font-size: 0.75rem;
+    }
+    nav .nav-menu li a {
+        padding: 10px;
+    }
+}
+
+
+
+/* ==================================================
+_top.scss
+===================================================== */
+
+@media(max-width:600px) {
+.main-visual {
+  justify-content: center;
+  padding: 0 0 30% 0;
+}
+.main-visual .textarea-top {
+  text-align: center;
+}
+.main-visual .textarea-bottom {
+  text-align: center;
+}
+}
+
+
+
+
+
+/* ==================================================
+_problem.scss
+===================================================== */
+// 問題定義
+@media (max-width: 1024px) {
+
+    .problem-title::before {
+        width: 80%;
+        left: 10%;
+    }
+
+    .problem-card {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        padding: 40px 20px;
+    }
+
+    .problem-icon-wrap {
+        width: 70%;
+        height: 15vh;
+    }
+
+    .problem-text p {
+        font-size: 0.75rem;
+    }
+
+    .problem-sub-title {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+/* ==================================================
+_about.scss
+===================================================== */
+@media(max-width:760px) {
+  .about-upper {
+    height: 55vh;
+  }
+  .about-upper-textarea p {
+    // line-height: 2;
+    letter-spacing: 0;
+    font-size: 12px;
+  }
+  .strength {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================================================
+_reason/scss
+===================================================== */
+@media (max-width: 768px) {
+  .honeycomb {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .middle-left,
+  .middle-right {
+    left: 0;    
+    transform: none !important;
+  }
+
+
+  .hex {
+    margin-bottom: 20px;
+
+  .honeycomb-left .hex:last-child,
+  .honeycomb-right .hex:last-child {
+      margin-bottom: 0;
+  }
+
+
+  .hex:hover {
+      transform: none !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// 500px以下 (スマートフォン向けの調整)
+@media (max-width: 500px) {
+  .honeycomb {
+    gap: 40px;
+  }
+
+  .honeycomb-left,
+  .honeycomb-right {
+    width: 100%;
+    align-items: center;
+  }
+
+  .hex {
+    width: 280px;
+    height: 320px; 
+    margin-bottom: 25px;
+  }
+  .hex-title {
+    font-size: 16px;
+    padding: 0 8px;
+  }
+
+
+  .introduce-btn {
+    width: 90%;
+    padding: 15px 20px;
+    margin-top: 40px;
+    font-size: 1.1rem;
+  }
+}
+
+}
+
+
+
+
+
+
+
+/* ==================================================
+_teachers/scss
+===================================================== */
+@media screen and (min-width: 769px) {
+  
+    .teachers-item {
+      flex-direction: row;
+    }
+
+    .teachers-item:nth-of-type(odd) {
+      flex-direction: row-reverse;
+    }
+  }
+
+/* ==================================================
+_voice.scss
+===================================================== */
+@media screen and (max-width: 768px) {
+    .student-card {
+    min-width: 90%;
+    width: 90%;
+    }
+}
+
+/* ==================================================
+_archive.scss
+===================================================== */
+@media screen and (max-width: 1024px) {
+    .archive-item {
+      grid-template-columns: repeat(2, minmax(240px, 1fr)); // 2列×4行
+      padding: 0 24px;
+      gap: 24px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .archive-item {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+
+/* ==================================================
+_course-flow.scss
+===================================================== */
+// 受講の流れ
+/* ここからレスポンシブ */
+
+@media (max-width: 768px) {
+  /* h2 下の黄色ラインのリサイズ */
+  .counseling-title::before {
+    width: 90%;
+    left: 5%;
+  }
+  /* 3step を縦並びに変更 */
+  .cou-steps {
+    flex-direction: column;
+    align-items: center;     // 中央揃え
+    margin-right: 0;
+    gap: 40px;               // スマホで余白調整
+  }
+  /* ずらしていた位置補正を解除 */
+  .cou-item--center {
+    transform: none;
+  }
+  .cou-item--last {
+    margin-right: 0;
+  }
+  /* divider を縦線 → 横線に変更 */
+  .divider {
+    width: 240px;
+    height: 2px;
+    background-color: #E8C321;
+    margin: 24px auto;
+    position: relative;
+  }
+  /* ▶︎ 下向きの矢印に変換 */
+  .divider::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 25px solid #E8C321;
+  }
+  /* 縦線の before を消す */
+  .divider::before {
+    display: none;
+  }
+  /* テキスト少し小さく */
+  .cou-text {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  /* ────────────────
+     STEP 全体を横並びにする
+     ──────────────── */
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  /* ────────────────
+     左の番号（1〜5）
+     ──────────────── */
+  .number {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    &::before {
+      display: none; // 線を消す（スマホで邪魔）
+    }
+    li {
+      margin-bottom: 48px;   // 数字間の余白
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+  /* ────────────────
+     course-text（右側）
+     ──────────────── */
+  .course-text {
+    width: 100%;
+  }
+  /* 各ステップの行 */
+  .course-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+  .course-row:last-child {
+    margin-bottom: 0;
+  }
+  /* テキスト部分（タイトル + 説明） */
+  .course-body {
+    width: 70%;
+    text-align: left;
+  }
+  .course-heading {
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+  }
+  .course-desc {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+  /* アイコン */
+  .course-icon img {
+    width: 40px;
+    height: auto;
+  }
+  /* ────────────────
+     タイトルの装飾
+     ──────────────── */
+  .course-title2::before {
+    width: 80%;
+    left: 10%;
+  }
+  /* ボタン */
+  .counseling-btn a {
+    padding: 10px 20px;
+    font-size: 0.7rem;
+  }
+}
+
+/* ==================================================
+_price.scss
+===================================================== */
+@media(max-width:970px) {
+  .price-content {
+  padding-inline: 0;
+}
+.price-upper {
+  padding: 30px 0 30px 0;
+}
+  .price-upper-upper {
+    flex-direction: column;
+  }
+  .upper-left {
+    width: 100%;
+  }
+  .upper-left::after {
+    width: 80%;
+    height: 1px;
+    top: 100%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .upper-right {
+    width: 100%;
+  }
+  .how-to-pay {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .how-to-pay-title {
+    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
+  }
+  .price-bottom {
+    padding: 30px 3% 30px 3%;
+  }
+}
+@media(max-width:660px) {
+  .price {
+    padding: 60px 6% 60px 6%;
+  }
+.upper-right .item-comment p {
+  font-size: 16px;
+}
+  .upper-right .item-price p span {
+    font-size: 48px;
+  }
+ .price-bottom {
+  flex-direction: column;
+ }
+ .price-bottom-left {
+  width: 100%;
+  margin-bottom: 30px;
+ }
+ .price-bottom-right {
+  width: 100%;
+ }
+}
+
+
+
+
+
+/* ==================================================
+_counselling-flow.scss
+===================================================== */
+// カウンセリングレスポンシブ
+// 
+@media (max-width: 768px) {
+  /* h2 下の黄色ラインのリサイズ */
+  .counseling-title::before {
+    width: 90%;
+    left: 5%;
+  }
+  /* 3step を縦並びに変更 */
+  .cou-steps {
+    flex-direction: column;
+    align-items: center;     // 中央揃え
+    margin-right: 0;
+    gap: 40px;               // スマホで余白調整
+  }
+  /* ずらしていた位置補正を解除 */
+  .cou-item--center {
+    transform: none;
+  }
+  .cou-item--last {
+    margin-right: 0;
+  }
+  /* divider を縦線 → 横線に変更 */
+  .divider {
+    width: 240px;
+    height: 2px;
+    background-color: #E8C321;
+    margin: 24px auto;
+    position: relative;
+  }
+  /* ▶︎ 下向きの矢印に変換 */
+  .divider::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 25px solid #E8C321;
+  }
+  /* 縦線の before を消す */
+  .divider::before {
+    display: none;
+  }
+  /* テキスト少し小さく */
+  .cou-text {
+    font-size: 0.85rem;
+  }
+}
+
+/* ==================================================
+_faq.scss
+===================================================== */
+
+
+
+
+
+
+
+
+
+
+
+/* ==================================================
+_footer.scss
+===================================================== */
+// footerレスポンシブ
+@media (max-width: 375px) {
+    .footer-inner {
+            flex-direction: column;
+        }
+    
+        .footer-left {
+            order: 1;
+        }
+    
+        .footer-right {
+            order: 2;
+        }
+    
+        .footer-center {
+            order: 3;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝下層ページ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+/* ==================================================
+_about-meta.scss
+===================================================== */
+@media (max-width: 960px) {
+
+    .avatar img {
+        margin-top: 15px;
+    }
+
+    .meta-point-cards {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+
+    @media (max-width: 600px) {
+        .section-title {
+            width: 80%;
+        }
+
+        .avatars {
+            width: 100%;
+        }
+
+        .avatar img {
+            margin-top: 50px;
+        }
+
+
+        .speech-bubble-left {
+            &::before {
+                top: 58%;
+            }
+
+            &::after {
+                top: 58%;
+            }
+        }
+
+        .speech-bubble-right {
+            &::before {
+                top: 58%;
+            }
+
+            &::after {
+                top: 58%;
+            }
+        }
+
+        .meta-point-cards {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .point-card {
+            width: 90%;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+    }
+
+
+    @media (max-width: 375px) {
+        .bg-contents {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+
+            .top-text {
+                width: 80%;
+                padding-left: 30px;
+
+            }
+
+            .second-text {
+                position: absolute;
+                bottom: 20%;
+                left: 15px;
+                font-size: 16px;
+                color: #000000;
+                text-shadow: none;
+            }
+
+            .avatar img {
+                margin-top: 10px;
+            }
+        }
+
+    }
+}
+
+
+
+/* ==================================================
+_about-offlinemeetup.scss
+===================================================== */
+@media (max-width: 960px) {
+
+    .avatar img {
+        margin-top: 15px;
+    }
+
+    .meta-point-cards {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    @media (max-width: 600px) {
+        .section-title {
+            width: 80%;
+        }
+
+        .avatars {
+            width: 100%;
+        }
+
+        .avatar img {
+            margin-top: 50px;
+        }
+
+        .speech-bubble-left {
+            &::before {
+                top: 58%;
+            }
+
+            &::after {
+                top: 58%;
+            }
+        }
+
+        .speech-bubble-right {
+            &::before {
+                top: 58%;
+            }
+
+            &::after {
+                top: 58%;
+            }
+        }
+
+        .meta-point-cards {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .point-card {
+            width: 90%;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+    }
+
+
+    @media (max-width: 375px) {
+        .bg-contents {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+
+            .top-text {
+                width: 80%;
+                padding-left: 30px;
+
+            }
+
+            .second-text {
+                position: absolute;
+                bottom: 20%;
+                left: 15px;
+                font-size: 16px;
+                color: #000000;
+                text-shadow: none;
+            }
+
+            .avatar img {
+                margin-top: 10px;
+            }
+        }
+
+    }
+}

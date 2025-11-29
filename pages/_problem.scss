@@ -1,15 +1,20 @@
-.problem-title {
-    text-align: center;
-    position: relative;
 
-    &::before {
-        content: "";
-        position: absolute;
-        width: 40%;
-        height: 4px;
-        background-color: #FFF100;
-        top: 100%;
-        left: 30%;
+.problem-area {
+    padding-block: 60px;
+
+    .problem-title {
+        text-align: center;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 40%;
+            height: 4px;
+            background-color: #FFF100;
+            top: 100%;
+            left: 30%;
+        }
     }
 }
 
