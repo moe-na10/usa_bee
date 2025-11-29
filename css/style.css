@@ -2340,18 +2340,29 @@ _problem.scss
 /* ==================================================
 _about.scss
 ===================================================== */
-@media (max-width: 760px) {
+@media (max-width: 1110px) {
+  .about-upper-textarea p {
+    letter-spacing: 0;
+    font-size: 14px;
+    line-height: 2.5;
+  }
+}
+
+@media (max-width: 820px) {
   .about-upper {
     height: 55vh;
+    line-height: 1;
   }
   .about-upper-textarea p {
     letter-spacing: 0;
     font-size: 12px;
+    line-height: 2;
   }
-  .strength {
+  .about .strength {
     font-size: 14px;
   }
 }
+
 /* ==================================================
 _reason/scss
 ===================================================== */
