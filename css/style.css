@@ -706,6 +706,35 @@ nav .counseling-btn a:hover {
   left: 130px;
 }
 
+.introduce-btn {
+  display: inline-block;
+  margin: 0 auto;
+  text-decoration: none;
+  color: #333;
+  background-color: #EB6846;
+  padding: 20px 40px;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(175, 174, 174, 0.9);
+  transition: 0.3s;
+  margin-top: 60px;
+}
+.introduce-btn:hover {
+  transform: scale(1.06) translateY(-2px);
+  opacity: 0.95;
+}
+
+.introduce-btn--center {
+  display: flex;
+  justify-content: center;
+}
+.introduce-btn--center a {
+  margin: 0 auto;
+}
+.introduce-btn--center a p {
+  color: #FFF;
+}
+
 .teachers {
   padding: 80px 0;
   text-align: center;
@@ -1585,16 +1614,7 @@ nav .counseling-btn a:hover {
 .faq-more-btn.open::after {
   content: "閉じる";
 }
-.accordion-hidden {
-  pointer-events: none;
-  opacity: 0;
-}
 
-/*--------------------------------------------------------------
-
-about-meta
-
---------------------------------------------------------------*/
 body {
   max-width: 100%;
   margin: 0 auto;
