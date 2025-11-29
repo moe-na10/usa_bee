@@ -219,4 +219,12 @@ $(function () {
     $(window).on('scroll', checkVisibility);
 
 
+$(function(){
+    $('.accordion_type1 .accordion_header_type1').click(function(){
+        $(this).next('.accordion_inner_type1').slideToggle();
+        $(this).toggleClass("open");
+});
+
+});
+
 });
