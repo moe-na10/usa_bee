@@ -290,11 +290,14 @@ nav .counseling-btn a:hover {
   text-align: left;
 }
 
-.problem-title {
+.problem-area {
+  padding-block: 60px;
+}
+.problem-area .problem-title {
   text-align: center;
   position: relative;
 }
-.problem-title::before {
+.problem-area .problem-title::before {
   content: "";
   position: absolute;
   width: 40%;
@@ -757,7 +760,7 @@ nav .counseling-btn a:hover {
 }
 
 .teachers {
-  padding: 80px 0;
+  padding-block: 60px;
   text-align: center;
 }
 .teachers .teachers-title {
@@ -831,7 +834,7 @@ nav .counseling-btn a:hover {
 }
 
 .voice {
-  padding: 80px 0;
+  padding: 60px 0;
   background: #f5f5f5;
   /*  プロフィールと本文の「間」に線を入れる */
 }
@@ -921,7 +924,7 @@ nav .counseling-btn a:hover {
 }
 
 .archive {
-  padding: 80px 0;
+  padding: 60px 0;
   background: #f5f5f5;
   /* =========================
      カード一覧レイアウト
@@ -1089,6 +1092,7 @@ nav .counseling-btn a:hover {
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
+  padding-block: 60px;
 }
 .course-area .course-title {
   font-size: 2.4rem;
@@ -1180,7 +1184,7 @@ nav .counseling-btn a:hover {
 
 .counseling-btn {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .counseling-btn a {
   display: inline-block;
@@ -1361,6 +1365,7 @@ nav .counseling-btn a:hover {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
+  padding-block: 60px;
 }
 
 .counseling-title {
@@ -1529,6 +1534,26 @@ nav .counseling-btn a:hover {
     display: none !important;
   }
 }
+.faq {
+  padding-block: 60px;
+  text-align: center;
+}
+.faq .faq-title {
+  position: relative;
+  font-size: 2.4rem;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.faq .faq-title::before {
+  content: "";
+  position: absolute;
+  width: 26%;
+  height: 6px;
+  background-color: #FFF100;
+  top: 100%;
+  left: 37%;
+}
+
 .faq_content .accordion_type1 {
   max-width: 1100px;
   margin: 0 auto;
@@ -1616,7 +1641,7 @@ nav .counseling-btn a:hover {
 .faq-more-btn {
   display: block;
   margin: 30px auto 0;
-  padding: 12px 30px;
+  padding: 18px 30px;
   background-color: #0f132a;
   color: #fff;
   border: none;
