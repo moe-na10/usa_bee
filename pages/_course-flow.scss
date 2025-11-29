@@ -3,6 +3,11 @@
     margin: 0 auto;
     text-align: center;
 
+    .course-title {
+      font-size: 2.4rem;
+      margin-top: 60px;
+    }
+
 }
 
 .course-title2 {
@@ -14,7 +19,7 @@
         position: absolute;
         display: inline-block;
         width: 50%;
-        height: 4px;
+        height: 6px;
         background-color: #FFF100;
 
         top: 100%;
