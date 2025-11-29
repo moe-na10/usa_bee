@@ -8,11 +8,6 @@ body {
     margin: 0 auto;
     font-size: 16px;
 
-    .wrapper {
-        width: 100%;
-        padding: 0 10px;
-        background-color: orange;
-    }
 
     img {
         max-width: 100%;
@@ -22,13 +17,12 @@ body {
     background-color: #fffbec;
 }
 
-
-
 .contents-text {
     padding: 30px 70px;
 
     h3 {
         padding: 30px 0;
+        font-size: 24px;
     }
 
     .contents-sub-title {
@@ -91,7 +85,7 @@ slider
 
 .text-content-bottom {
     text-align: center;
-    padding: 100px 0;
+    padding: 50px 0 30px 0;
 
 
     span {
@@ -99,5 +93,27 @@ slider
         font-size: 24px;
         font-weight: bold;
                 padding-top: 0;
+    }
+}
+
+.meta-counseling-btn {
+    text-align: center;
+    a {
+        display: inline-block;
+        background-color: #EB6846;
+        color: white;
+        width: 50%;
+        padding: 20px 40px;
+        margin-bottom: 50px;
+        border-radius: 15px;
+        font-size: 1.75rem;
+        font-weight: 400;
+        box-shadow: 0 4px 12px rgba(175, 174, 174, 0.9);
+        transition: 0.3s;
+
+        &:hover {
+            transform: scale(1.06) translateY(-2px);
+            opacity: 0.95;
+        }
     }
 }
