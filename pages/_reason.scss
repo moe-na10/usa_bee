@@ -156,3 +156,66 @@
   }
 }
 
+
+
+@media (max-width: 768px) {
+  .honeycomb {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .middle-left,
+  .middle-right {
+    left: 0;    
+    transform: none !important;
+  }
+
+
+  .hex {
+    margin-bottom: 20px;
+
+  .honeycomb-left .hex:last-child,
+  .honeycomb-right .hex:last-child {
+      margin-bottom: 0;
+  }
+
+
+  .hex:hover {
+      transform: none !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// 500px以下 (スマートフォン向けの調整)
+@media (max-width: 500px) {
+  .honeycomb {
+    gap: 40px;
+  }
+
+  .honeycomb-left,
+  .honeycomb-right {
+    width: 100%;
+    align-items: center;
+  }
+
+  .hex {
+    width: 280px;
+    height: 320px; 
+    margin-bottom: 25px;
+  }
+  .hex-title {
+    font-size: 16px;
+    padding: 0 8px;
+  }
+
+
+  .introduce-btn {
+    width: 90%;
+    padding: 15px 20px;
+    margin-top: 40px;
+    font-size: 1.1rem;
+  }
+}
+
+}
