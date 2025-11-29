@@ -215,9 +215,13 @@ nav .counseling-btn a:hover {
   transform: translate(-50%, -70%);
   z-index: 1000;
   text-align: center;
+  width: 100%;
 }
 .teaser-text h2 {
+  display: inline-block;
+  font-size: clamp(16px, 2vw, 32px);
   letter-spacing: 3;
+  line-height: 1.6;
   font-weight: 400;
   opacity: 0;
   position: relative;
@@ -267,28 +271,23 @@ nav .counseling-btn a:hover {
   background-image: url(../img/pc1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative;
+  display:flex;
+  align-items: flex-end;
+  padding: 0 5% 15% 0;
+  justify-content: right;
 }
 .main-visual .main-visual-textarea {
-  position: relative;
-}
-.main-visual .textarea-top {
   color: #fff;
-  position: absolute;
-  top: 50vh;
-  left: 60%;
-  width:100%;
+  max-width: 520px;
 }
 .main-visual .textarea-top h3 {
   margin-bottom: 20px;
 }
-.main-visual .textarea-bottom {
-  color: #fff;
-  position: absolute;
-  top: 70vh;
-  left: 60%;
-  width:100%;
-  font-size: 0.8rem;
+.main-visual .textarea-top p {
+  margin-bottom: 20px;
+}
+.textarea-bottom {
+  font-size: 14px;
   text-align: left;
 }
 
