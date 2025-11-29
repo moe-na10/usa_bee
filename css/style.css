@@ -1547,6 +1547,42 @@ nav .counseling-btn a:hover {
   transform: translateX(-50%);
 }
 
+.accordion_inner_type1 {
+  display: none;
+}
+
+.faq-more-btn {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 30px;
+  background-color: #0f132a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+.faq-more-btn:hover {
+  opacity: 0.8;
+}
+.faq-more-btn::after {
+  content: "もっと見る";
+}
+.faq-more-btn.open::after {
+  content: "閉じる";
+}
+.accordion-hidden {
+  pointer-events: none;
+  opacity: 0;
+}
+
+/*--------------------------------------------------------------
+
+about-meta
+
+--------------------------------------------------------------*/
 body {
   max-width: 100%;
   margin: 0 auto;
