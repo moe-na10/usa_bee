@@ -159,3 +159,21 @@
     }
   }
 }
+/* アニメーションの初期状態 */
+.price-upper,
+.price-bottom {
+  opacity: 0;
+  transform: translateX(50px); /* 少し右にずらしておく */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* アニメーションを実行するためのクラス */
+.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* .price-bottom のアニメーションを少し遅らせる */
+.price-bottom.is-visible {
+  transition-delay: 0.3s; /* 0.3秒遅れて開始 */
+}

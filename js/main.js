@@ -220,4 +220,27 @@ $(function () {
 
 
 
+
+
+
+
+
+
+// price　fadein
+$(function() {
+  $(window).on('scroll', function() {
+    $('.price-upper, .price-bottom').each(function() {
+      var trigger = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+
+      
+      if (scroll > trigger - windowHeight + 80) {
+        $(this).addClass('is-visible');
+      }
+    });
+  });
+});
+
+
 });
