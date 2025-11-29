@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-@use "../pages/variables";
-@use "../pages/mixin";
-
 @use "../pages/header";
 @use "../pages/footer";
 
@@ -21,13 +18,8 @@
 @use "../pages/about-meta";
 @use "../pages/about-offlinemeetup";
 
+@use "../pages/responsive";
 
-// pages (各ページ固有のスタイル、必要に応じて)
-// @use "pages/pronavi-continuity-1";
-// @use "pages/pronavi-continuity-2";
-
-// // components (再利用可能なパーツ)
-// @use "components/button";
-// @use "components/card";
-// @use "components/form";
-// @use "components/modal";
+html {
+    scroll-behavior: smooth;
+}
