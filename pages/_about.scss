@@ -1,6 +1,7 @@
 
 .about {
-  padding-block: 60px;
+  // padding-block: 60px;
+  padding-top: 30px;
   width: 100%;
   text-align: center;
 
@@ -180,7 +181,8 @@
   display: flex;
   justify-content: center;
   gap: clamp(20px, 5vw, 80px);
-  padding: 60px 0;
+  // padding: 60px 0;
+  padding-bottom: 60px;
 }
 
 
