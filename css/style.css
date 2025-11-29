@@ -421,7 +421,7 @@ nav .counseling-btn a:hover {
   background-image: url(../img/about-image.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  filter: blur(13px);
+  filter: blur(6px);
   border-radius: inherit;
   position: absolute;
 }
