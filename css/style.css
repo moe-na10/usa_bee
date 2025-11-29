@@ -385,15 +385,19 @@ nav .counseling-btn a:hover {
   display: inline-block;
   font-size: 42px;
   position: relative;
+  font-size: 2.4rem;
+  margin-bottom: 60px;
 }
 .about-title::after {
   content: "";
   background-color: #FFF100;
-  width: 100%;
   height: 6px;
   bottom: 0;
   left: 0;
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140%;
 }
 .about-subtitle {
   font-size: 16px;
@@ -590,15 +594,16 @@ nav .counseling-btn a:hover {
   text-align: center;
   margin-bottom: 60px;
   position: relative;
+  font-size: 2.4rem;
 }
 .reason-title::before {
   content: "";
   position: absolute;
-  width: 40%;
-  height: 4px;
+  width: 30%;
+  height: 6px;
   background-color: #FFF100;
   top: 100%;
-  left: 30%;
+  left: 36%;
 }
 
 .honeycomb {
@@ -714,11 +719,11 @@ nav .counseling-btn a:hover {
 .teachers .teachers-title::before {
   content: "";
   position: absolute;
-  width: 40%;
-  height: 4px;
+  width: 36%;
+  height: 6px;
   background-color: #FFF100;
   top: 100%;
-  left: 30%;
+  left: 32%;
 }
 .teachers .teachers-item {
   display: flex;
@@ -789,11 +794,11 @@ nav .counseling-btn a:hover {
 .voice .voice-title::before {
   content: "";
   position: absolute;
-  width: 40%;
-  height: 4px;
+  width: 36%;
+  height: 6px;
   background-color: #FFF100;
   top: 100%;
-  left: 30%;
+  left: 32%;
 }
 .voice .student-contents {
   display: flex;
@@ -896,11 +901,11 @@ nav .counseling-btn a:hover {
 .archive .archive-title::before {
   content: "";
   position: absolute;
-  width: 40%;
-  height: 4px;
+  width: 36%;
+  height: 6px;
   background-color: #FFF100;
   top: 100%;
-  left: 30%;
+  left: 32%;
 }
 .archive .archive-item {
   display: grid;
@@ -924,14 +929,14 @@ nav .counseling-btn a:hover {
 }
 .archive .archive-text .before-text,
 .archive .archive-text .after-text {
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   line-height: 1.7;
 }
 .archive .archive-text .before-text {
   position: relative;
   margin-bottom: 10px;
-  color: #666;
   letter-spacing: 0.03em;
+  font-weight: 700;
   /* Before → After の間の矢印 */
 }
 .archive .archive-text .before-text::after {
@@ -1035,6 +1040,10 @@ nav .counseling-btn a:hover {
   margin: 0 auto;
   text-align: center;
 }
+.course-area .course-title {
+  font-size: 2.4rem;
+  margin-top: 60px;
+}
 
 .course-title2 {
   position: relative;
@@ -1044,7 +1053,7 @@ nav .counseling-btn a:hover {
   position: absolute;
   display: inline-block;
   width: 50%;
-  height: 4px;
+  height: 6px;
   background-color: #FFF100;
   top: 100%;
   left: 25%;
@@ -1177,6 +1186,7 @@ nav .counseling-btn a:hover {
 }
 .price .test-title {
   margin-bottom: 30px;
+  font-size: 2.4rem;
 }
 .price .test-title::after {
   background-color: #fff;
@@ -1307,15 +1317,17 @@ nav .counseling-btn a:hover {
   text-align: center;
   margin-bottom: 60px;
   position: relative;
+  position: relative;
+  font-size: 2.4rem;
 }
 .counseling-title::before {
   content: "";
   position: absolute;
-  width: 40%;
-  height: 4px;
+  width: 60%;
+  height: 6px;
   background-color: #FFF100;
   top: 100%;
-  left: 30%;
+  left: 20%;
 }
 
 .steps-text {
