@@ -491,7 +491,7 @@ _faq.scss
 _footer.scss
 ===================================================== */
 // footerレスポンシブ
-@media (max-width: 375px) {
+@media (max-width: 600px) {
     .footer-inner {
             flex-direction: column;
         }
